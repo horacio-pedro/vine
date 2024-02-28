@@ -1,0 +1,22 @@
+{
+  "editor.tabSize": 2,
+  "eslint.alwaysShowStatus": true,
+  "material-icon-theme.folders.associations": {
+    "infra": "container",
+    "application": "app",
+    "entities": "class",
+    "domain": "container",
+    "repositories": "mappings",
+    "useCases": "project",
+    "backgroundJobs": "archive",
+    "infrastructure": "server",
+    "interface": "shared",
+    "dao": "json",
+    "http": "contract",
+    "presenters": "global",
+    "seeds": "include"
+  },
+  "editor.colorDecorators": true,
+  "eslint.run": "onType",
+  "pugFormatter.tabSize": 2
+}
