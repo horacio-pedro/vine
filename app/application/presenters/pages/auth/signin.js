@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("jsxte/jsx-runtime");
+const todo_add_js_1 = require("../../components/todo-add.js");
+const App_js_1 = require("../../App.js");
+exports.default = (props) => {
+    return ((0, jsx_runtime_1.jsx)(App_js_1.Html, { children: (0, jsx_runtime_1.jsxs)("div", { class: "main-container", children: [(0, jsx_runtime_1.jsx)("h1", { children: "TODO List" }), (0, jsx_runtime_1.jsx)("ul", { class: "todos-list", children: props.todos.map((todo) => ((0, jsx_runtime_1.jsxs)("li", { class: "todo-entry", children: [(0, jsx_runtime_1.jsx)("span", { children: todo.title }), (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsxs)("form", { action: "/todo-delete", method: "get", children: [(0, jsx_runtime_1.jsx)("input", { type: "hidden", name: "id", value: todo.id }), (0, jsx_runtime_1.jsx)("button", { class: "todo-entry-remove-btn btn", type: "submit", children: "Delete" })] }), (0, jsx_runtime_1.jsx)("p", { class: "todo-entry-is-done-label", children: "Is Done:" }), (0, jsx_runtime_1.jsxs)("form", { action: "/todo-update-state", method: "get", children: [(0, jsx_runtime_1.jsx)("input", { type: "hidden", name: "id", value: todo.id }), (0, jsx_runtime_1.jsx)("input", { type: "hidden", name: "state", value: todo.completed ? '0' : '1' }), (0, jsx_runtime_1.jsx)("button", { class: "todo-entry-update-state-btn", type: "submit", children: (0, jsx_runtime_1.jsx)("span", { children: todo.completed ? '✅' : '❌' }) })] })] })] }))) }), (0, jsx_runtime_1.jsx)(todo_add_js_1.TodoAddForm, {})] }) }));
+};

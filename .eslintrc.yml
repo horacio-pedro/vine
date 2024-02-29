@@ -1,0 +1,80 @@
+env:
+  es2021: true
+  node: true
+parser: "@typescript-eslint/parser"
+extends:
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended"
+parserOptions:
+  ecmaVersion: latest
+  sourceType: "module"
+  ecmaFeatures:
+    classes: true
+    jsx: true
+plugins:
+  - "@typescript-eslint"
+rules:
+  brace-style:
+    - warn
+    - 1tbs
+  camelcase: off
+  comma-dangle:
+    - warn
+    - always-multiline
+  comma-style:
+    - error
+    - last
+  complexity:
+    - error
+    - 10
+  curly: warn
+  quotes:
+    - error
+    - single
+  eol-last:
+    - error
+    - always
+  id-length: error
+  max-lines: error
+  max-params:
+    - error
+    - 4
+  no-duplicate-imports: error
+  no-eq-null: error
+  eqeqeq:
+    - error
+    - smart
+  no-eval: error
+  no-implied-eval: error
+  no-invalid-this: error
+  no-shadow: error
+  no-undefined: error
+  no-empty-function: warn
+  no-extend-native: error
+  no-param-reassign: warn
+  no-unused-expressions: warn
+  no-useless-concat: warn
+  no-label-var: warn
+  no-use-before-define: error
+  no-const-assign: error
+  no-template-curly-in-string: error
+  no-unused-vars: error
+  no-useless-constructor: warn
+  no-useless-rename: warn
+  no-var: error
+  no-extra-semi: error
+  no-warning-comments:
+    - warn
+    - location: anywhere
+      terms:
+        - todo
+        - fixme
+  prefer-promise-reject-errors: error
+  semi:
+    - error
+    - never
+  max-len:
+    - error
+    - code: 300
+  "@typescript-eslint/no-explicit-any": off
+  "@typescript-eslint/no-non-null-assertion": off
