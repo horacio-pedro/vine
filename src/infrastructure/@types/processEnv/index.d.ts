@@ -7,8 +7,8 @@ declare global {
       SECRET_SESSION: string | string[];
       REDIS_URL: string;
       APP_WEB_URL: string;
-      MONGODB_URI_DEV: string;
-      MONGODB_URI_PRO: string;
+      MONGODB_URI_LOCAL: string;
+      MONGODB_URI_CLOUD: string;
       CLOUD_FOLDER: string;
       AUTH_SECRET: string
       TOKEN_EXPIRATION_TIME: string
@@ -27,6 +27,7 @@ declare global {
       CLOUDINARY_API_KEY: string
       CLOUDINARY_API_SECRET: string
       SECRET_SESSION: string
+      DB_CLOUD: boolean
     }
   }
 }

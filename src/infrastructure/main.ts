@@ -1,9 +1,12 @@
+import 'dotenv/config'
+import '@infra/connections/mongodb.connection'
 import { ExpressAdapter } from './adapters'
+import { formatDate } from './config/time.util'
 
-const httpServer = new ExpressAdapter()
-httpServer.templateEngine()
+const express = new ExpressAdapter()
+express.templateEngine()
 const port = process.env.PORT | 3000
-httpServer.register('get', '/', function (response: any) {
-  response.render('auth/signin.tsx')
+express.endpoint('get', '/', function (response: any) {
+  response.render('auth/signin')
 })
-httpServer.listen(port).then(() => console.info('listening on port ' + port))
+express.listen(port).then(() => console.info(`[${formatDate()}] Application running on port ${port}`))

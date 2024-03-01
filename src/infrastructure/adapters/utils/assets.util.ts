@@ -5,6 +5,6 @@ export const assetsDirectory = express.static(
   path.join(
     __dirname,
     '..', '..', '..',
-    '/app/presenters/assets',
+    '/application/presenters/assets',
   ),
 )

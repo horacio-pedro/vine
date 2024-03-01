@@ -20,7 +20,7 @@ export default class ExpressAdapter implements IExpress {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	async register(method: string, url: string, callback: Function): Promise<void> {
+	async endpoint(method: string, url: string, callback: Function): Promise<void> {
 		this.app[method](url, async function (request: Request, response: Response) {
 			const output = await callback(response)
 			return output

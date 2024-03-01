@@ -1,34 +1,35 @@
-// import { connect, connection } from 'mongoose'
-// import { EventEmitter } from 'events'
+import { EventEmitter } from 'node:events'
+import { connect, connection } from 'mongoose'
+import { formatDate } from '@infra/config/time.util'
 
-// class Connection extends EventEmitter {
-//   constructor(
-//     url = process.env.NODE_ENV === 'development'
-//       ? process.env.MONGODB_URI_DEV
-//       : process.env.MONGODB_URI_PRO,
-//   ) {
-//     super()
-//     connect(url)
-//     this.connection()
-//   }
+class Connection extends EventEmitter {
+  constructor(
+    url = process.env.DB_CLOUD === false
+      ? process.env.MONGODB_URI_LOCAL
+      : process.env.MONGODB_URI_CLOUD,
+  ) {
+    super()
+    connect(url)
+    this.connection()
+  }
 
-//   private connection(): void {
-//     try {
-//       const db = connection
-//       db.on('error', console.error.bind(console, 'connection error:'))
-//       db.once('open', () => {
-//         console.info(
-//           `Successfully connected to database. URI: ${process.env.DB_CLOUD === 'true'
-//             ? process.env.MONGODB_URI_CLOUD
-//             : process.env.MONGODB_URI_LOCAL
-//           }`,
-//         )
-//       })
-//       this.emit('connected', db)
-//     } catch (error) {
-//       this.emit('error', error)
-//     }
-//   }
-// }
+  private connection(): void {
+    try {
+      const db = connection
+      db.on('error', console.error.bind(console, `[${formatDate()}] connection error:`))
+      db.once('open', () => {
+        console.info(
+          `[${formatDate()}] Successfully connected to database.\nURI: ${process.env.DB_CLOUD === false
+            ? process.env.MONGODB_URI_LOCAL
+            : process.env.MONGODB_URI_CLOUD
+          }`,
+        )
+      })
+      this.emit('connected', db)
+    } catch (error) {
+      this.emit('error', error)
+    }
+  }
+}
 
-// export default new Connection()
+export default new Connection()
