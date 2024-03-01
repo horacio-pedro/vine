@@ -28,6 +28,7 @@ declare global {
       CLOUDINARY_API_SECRET: string
       SECRET_SESSION: string
       DB_CLOUD: boolean
+      SESSION_EXPIRE: number
     }
   }
 }

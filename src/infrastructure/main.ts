@@ -1,12 +1,39 @@
 import 'dotenv/config'
+import 'module-alias/register'
 import '@infra/connections/mongodb.connection'
-import { ExpressAdapter } from './adapters'
+import { createServer } from 'node:http'
+import { expressAdapter } from './adapters'
 import { formatDate } from './config/time.util'
 
-const express = new ExpressAdapter()
-express.templateEngine()
-const port = process.env.PORT | 3000
-express.endpoint('get', '/', function (response: any) {
-  response.render('auth/signin')
-})
-express.listen(port).then(() => console.info(`[${formatDate()}] Application running on port ${port}`))
+const port = process.env.PORT || 3000
+expressAdapter.set('port', port)
+
+const server = createServer(expressAdapter)
+const onError = (error: { syscall: string; code: unknown }) => {
+  if (error.syscall !== 'listen') {
+    throw error
+  }
+
+  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`
+
+  switch (error.code) {
+    case 'EACCES':
+      console.error(`${bind} requires elevated privileges`)
+      break
+    case 'EADDRINUSE':
+      console.error(`${bind} is already in use`)
+      break
+    default:
+      throw error
+  }
+}
+
+const onListening = () => {
+  const addr = server.address()
+  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr!.port}`
+  console.info(`[${formatDate()}] Application running on port ${bind}`)
+}
+
+server.listen(port)
+server.on('error', onError)
+server.on('listening', onListening)
