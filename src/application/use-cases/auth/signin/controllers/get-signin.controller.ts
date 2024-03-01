@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import { Route } from '@app/use-cases/dashboard/helpers'
 import { Exception } from '@app/helpers'
 import { Page } from '../helpers'
 
@@ -7,12 +8,12 @@ export class GetSigninController {
     try {
       const title = 'Entrar'
 
-      // if (request.isAuthenticated()) {
-      //   const { confirmedEmail } = request.user as unknown as TUser
-      //   if (confirmedEmail === true) {
-      //     return response.redirect(Route.GENERAL_DASHBOARD)
-      //   }
-      // }
+      if (request.isAuthenticated()) {
+        const { confirmedEmail } = request.user as unknown as { confirmedEmail: boolean }
+        if (confirmedEmail === true) {
+          return response.redirect(Route.DASHBOARD)
+        }
+      }
 
       return response.render(Page.SIGNIN, { title })
     } catch (err: unknown) {

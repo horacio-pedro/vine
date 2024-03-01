@@ -1,14 +1,20 @@
 import { IRouter, Router } from 'express'
 import { getSigninRouter } from '@app/use-cases/auth/signin/routes/get-signin.routes'
+import { dashboardRouter } from '@app/use-cases/dashboard'
 
 class EndPoints {
-  router: IRouter
+  public readonly router: IRouter
+
   constructor() {
     this.router = Router()
-    this.routes()
+    this.endpoints()
   }
 
-  routes() {
+  private endpoints(): void {
+    this.router.use('/',
+      dashboardRouter,
+    )
+
     this.router.use('/auth',
       getSigninRouter,
     )
