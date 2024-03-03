@@ -1,0 +1,27 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,24,24">
+	<desc>videocam icon - Licensed under Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0) - Created with Iconfu.com - Derivative work of Material icons (Copyright Google Inc.)</desc>
+	<defs>
+		<linearGradient x1="11.04" y1="11.01" x2="35.93" y2="35.9" id="color-afnkSedY" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="0.48" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse" id="color-Sfn2gLn8">
+			<stop offset="0" stop-color="#ff1d1c"/>
+			<stop offset="1" stop-color="#cc0000"/>
+		</linearGradient>
+		<linearGradient x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse" id="color-whmjryWY">
+			<stop offset="0" stop-color="#960000"/>
+			<stop offset="1" stop-color="#490000"/>
+		</linearGradient>
+		<mask id="mask-rMTjSpH3">
+			<rect fill="url(#color-afnkSedY)" x="6.34" y="8.29" width="17.61" height="15.66"/>
+		</mask>
+	</defs>
+	<g fill="none" fill-rule="nonzero" style="mix-blend-mode: normal">
+		<path d="M18.67,23.69c-4.44,0.42 -8.9,0.42 -13.33,0c-2.66,-0.25 -4.77,-2.36 -5.02,-5.02c-0.42,-4.44 -0.42,-8.9 0,-13.33c0.25,-2.66 2.36,-4.77 5.02,-5.02c4.44,-0.42 8.9,-0.42 13.33,0c2.66,0.25 4.77,2.36 5.02,5.02c0.42,4.44 0.42,8.9 0,13.33c-0.25,2.66 -2.36,4.77 -5.02,5.02z" fill="url(#color-Sfn2gLn8)"/>
+		<g fill="url(#color-whmjryWY)">
+			<path d="M15.25,11.02v-2.27c0,-0.18 -0.07,-0.34 -0.19,-0.46l2.79,2.79v-2.66l6.11,6.11c-0.05,1.38 -0.14,2.76 -0.27,4.14c-0.25,2.66 -2.36,4.77 -5.02,5.02c-1.36,0.13 -2.72,0.22 -4.08,0.26l-8.24,-8.24c0.12,0.12 0.28,0.19 0.46,0.19h7.8c0.36,0 0.65,-0.29 0.65,-0.65v-2.27l2.6,2.6v-1.95z" mask="url(#mask-rMTjSpH3)"/>
+		</g>
+		<path d="M17.85,8.42v7.15l-2.6,-2.6v2.27c0,0.36 -0.29,0.65 -0.65,0.65h-7.8c-0.36,0 -0.65,-0.29 -0.65,-0.65v-6.5c0,-0.36 0.29,-0.65 0.65,-0.65h7.8c0.36,0 0.65,0.29 0.65,0.65v2.27z" fill="#ffffff"/>
+	</g>
+</svg>

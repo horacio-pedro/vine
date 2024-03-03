@@ -1,6 +1,6 @@
 import { IRouter, Router } from 'express'
+import { landingPageRouter } from '@app/use-cases/landingpage'
 import { getSigninRouter } from '@app/use-cases/auth/signin/routes/get-signin.routes'
-import { dashboardRouter } from '@app/use-cases/dashboard'
 
 class EndPoints {
   public readonly router: IRouter
@@ -12,7 +12,7 @@ class EndPoints {
 
   private endpoints(): void {
     this.router.use('/',
-      dashboardRouter,
+      landingPageRouter,
     )
 
     this.router.use('/auth',

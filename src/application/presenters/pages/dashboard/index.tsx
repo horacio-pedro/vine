@@ -5,7 +5,7 @@ export default () => {
     <App>
       <div class="main-container">
         <h1>HELLO VINE</h1>
-        <h2>I'm the root path</h2>
+        <h2>I'm the Dashboard path</h2>
       </div>
     </App>
   )

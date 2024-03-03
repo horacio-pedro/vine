@@ -11,7 +11,7 @@ class DashboardRouter {
 
   private router(): void {
     this.run.get(
-      '/',
+      '/dashboard',
       (req, res) => res.redirect(Route.SIGNIN),
     )
 

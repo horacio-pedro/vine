@@ -52,14 +52,12 @@ class App {
     this.app.use(helmet.dnsPrefetchControl())
     this.app.use(helmet.xXssProtection())
     this.app.use(helmet.frameguard())
-    this.app.use(helmet.hidePoweredBy())
     this.app.use(helmet.hsts())
     this.app.use(helmet.ieNoOpen())
     this.app.use(helmet.noSniff())
     this.app.use(helmet.permittedCrossDomainPolicies())
     this.app.use(helmet.referrerPolicy())
     this.app.use(helmet.xssFilter())
-    this.app.use(helmet.xPoweredBy())
     this.app.use(express.urlencoded({ extended: true }))
   }
 

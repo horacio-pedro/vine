@@ -1,0 +1,1 @@
+const socket = io(); // can use io('http://127.0.0.1:3000') para especificar o dominio ou ele pega automaticamente

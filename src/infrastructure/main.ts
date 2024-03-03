@@ -4,11 +4,13 @@ import '@infra/connections/mongodb.connection'
 import { createServer } from 'node:http'
 import { expressAdapter } from './adapters'
 import { formatDate } from './config/time.util'
+import { websocket } from './connections/websocket.connection'
 
 const port = process.env.PORT || 3000
-expressAdapter.set('port', port)
-
 const server = createServer(expressAdapter)
+expressAdapter.set('port', port)
+websocket(server)
+
 const onError = (error: { syscall: string; code: unknown }) => {
   if (error.syscall !== 'listen') {
     throw error
@@ -29,8 +31,8 @@ const onError = (error: { syscall: string; code: unknown }) => {
 }
 
 const onListening = () => {
-  const addr = server.address()
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr!.port}`
+  const addr = server.address() as unknown as { port: number | string }
+  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`
   console.info(`[${formatDate()}] Application running on port ${bind}`)
 }
 

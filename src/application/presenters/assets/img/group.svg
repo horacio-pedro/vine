@@ -1,0 +1,27 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,24,24">
+	<desc>group icon - Licensed under Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0) - Created with Iconfu.com - Derivative work of Material icons (Copyright Google Inc.)</desc>
+	<defs>
+		<linearGradient x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse" id="color-6O7l0nIl">
+			<stop offset="0" stop-color="#0078a6"/>
+			<stop offset="1" stop-color="#003b65"/>
+		</linearGradient>
+		<linearGradient x1="8.46" y1="10.33" x2="36.11" y2="37.99" id="color-OCHXeOTq" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="0.48" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse" id="color-X8f4s64p">
+			<stop offset="0" stop-color="#1cd1ff"/>
+			<stop offset="1" stop-color="#009ecc"/>
+		</linearGradient>
+		<mask id="mask-O8RSLXmx">
+			<rect fill="url(#color-OCHXeOTq)" x="4.85" y="8.02" width="19.04" height="15.98"/>
+		</mask>
+	</defs>
+	<g fill="none" fill-rule="nonzero" style="mix-blend-mode: normal">
+		<path d="M18.67,23.69c-4.44,0.42 -8.9,0.42 -13.33,0c-2.66,-0.25 -4.77,-2.36 -5.02,-5.02c-0.42,-4.44 -0.42,-8.9 0,-13.33c0.25,-2.66 2.36,-4.77 5.02,-5.02c4.44,-0.42 8.9,-0.42 13.33,0c2.66,0.25 4.77,2.36 5.02,5.02c0.42,4.44 0.42,8.9 0,13.33c-0.25,2.66 -2.36,4.77 -5.02,5.02z" fill="url(#color-X8f4s64p)"/>
+		<g fill="url(#color-6O7l0nIl)">
+			<path d="M8.02,10.78c0.35,0.35 0.84,0.57 1.38,0.57c1.08,0 1.94,-0.87 1.94,-1.95c0,-0.54 -0.22,-1.03 -0.57,-1.38l3.24,3.24c0.18,0.06 0.38,0.09 0.58,0.09c1.08,0 1.94,-0.87 1.94,-1.95c0,-0.54 -0.22,-1.03 -0.57,-1.38l7.92,7.92c-0.05,0.91 -0.12,1.82 -0.2,2.73c-0.25,2.66 -2.36,4.77 -5.02,5.02c-2.12,0.2 -4.24,0.3 -6.37,0.31l-7.45,-7.45h8.94z" mask="url(#mask-O8RSLXmx)"/>
+		</g>
+		<path d="M13.95,14.93v1.63h-9.1v-1.63c0,-1.51 3.04,-2.27 4.55,-2.27c1.51,0 4.55,0.76 4.55,2.27zM19.15,14.93v1.63h-3.9v-1.63c0,-0.96 -0.53,-1.7 -1.28,-2.24c0.23,-0.02 0.44,-0.03 0.63,-0.03c1.51,0 4.55,0.76 4.55,2.27zM12.65,9.4c0,-1.08 0.87,-1.95 1.95,-1.95c1.08,0 1.94,0.87 1.94,1.95c0,1.08 -0.86,1.95 -1.94,1.95c-1.08,0 -1.95,-0.87 -1.95,-1.95zM7.45,9.4c0,-1.08 0.87,-1.95 1.95,-1.95c1.08,0 1.94,0.87 1.94,1.95c0,1.08 -0.86,1.95 -1.94,1.95c-1.08,0 -1.95,-0.87 -1.95,-1.95z" fill="#ffffff"/>
+	</g>
+</svg>

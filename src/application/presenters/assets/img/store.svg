@@ -1,0 +1,27 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,24,24">
+	<desc>store icon - Licensed under Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0) - Created with Iconfu.com - Derivative work of Material icons (Copyright Google Inc.)</desc>
+	<defs>
+		<linearGradient x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse" id="color-afv3EP3X">
+			<stop offset="0" stop-color="#a11dfe"/>
+			<stop offset="1" stop-color="#6e00cb"/>
+		</linearGradient>
+		<linearGradient x1="7.45" y1="7.45" x2="36.4" y2="36.4" id="color-jymfLgjb" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="0.48" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse" id="color-x1ONIUAb">
+			<stop offset="0" stop-color="#3f009f"/>
+			<stop offset="1" stop-color="#00005c"/>
+		</linearGradient>
+		<mask id="mask-MbXs5bjL">
+			<rect fill="url(#color-jymfLgjb)" x="6.15" y="6.8" width="17.83" height="17.18"/>
+		</mask>
+	</defs>
+	<g fill="none" fill-rule="nonzero" style="mix-blend-mode: normal">
+		<path d="M18.67,23.69c-4.44,0.42 -8.9,0.42 -13.33,0c-2.66,-0.25 -4.77,-2.36 -5.02,-5.02c-0.42,-4.44 -0.42,-8.9 0,-13.33c0.25,-2.66 2.36,-4.77 5.02,-5.02c4.44,-0.42 8.9,-0.42 13.33,0c2.66,0.25 4.77,2.36 5.02,5.02c0.42,4.44 0.42,8.9 0,13.33c-0.25,2.66 -2.36,4.77 -5.02,5.02z" fill="url(#color-afv3EP3X)"/>
+		<g fill="url(#color-x1ONIUAb)">
+			<path d="M8.1,15.9v-0.65l-1.95,-1.95h0.65l1.3,1.3v-1.3h3.9l-5.2,-5.2h10.4v-1.3l6.78,6.78c-0.04,1.7 -0.14,3.39 -0.29,5.08c-0.25,2.66 -2.36,4.77 -5.02,5.02c-1.69,0.16 -3.39,0.26 -5.08,0.29l-6.78,-6.78h2.6z" mask="url(#mask-MbXs5bjL)"/>
+		</g>
+		<path d="M17.2,13.3v3.9h-1.3v-3.9h-2.6v3.9h-6.5v-3.9h-0.65v-1.3l0.65,-3.25h10.4l0.65,3.25v1.3zM17.2,8.1h-10.4v-1.3h10.4zM12,13.3h-3.9v2.6h3.9z" fill="#ffffff"/>
+	</g>
+</svg>
