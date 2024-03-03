@@ -1,1 +1,1 @@
-export * from './controllers/get-signin.controller'
+export * from './routes/getSignin.routes'

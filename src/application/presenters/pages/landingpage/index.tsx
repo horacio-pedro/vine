@@ -410,7 +410,6 @@ export default () => {
         <section class="c2wd7 ca769" data-aos-id-6="">
             <div class="cqx6l cyhno cdcfy">
                 <div class="cmgtd cistn cre2j cfl7l cx5bd c5llv ctehq cakxp c5wvp" aria-hidden="true"></div>
-
                 <div class="cl9ye cc8xx cdcfy chlof">
                     <div class="c55v2 cdioo">
                         <div class="cwihz cqmiq c38qt cwegj c17z2 clpz0 cyhno c4pup cklpe cdcfy c29n1">
@@ -451,7 +450,6 @@ export default () => {
                             </div>
                             <div class="cwihz ctp1d cogs9 c60si cjkjb ca769" data-aos="fade-up" data-aos-anchor="[data-aos-id-6]">
                                 <div class="cyhno ctp1d cdcfy">
-
                                     <div class="c45uh cx5bd ctehq ckk9u cjt9n cakxp clfmb" aria-hidden="true"></div>
                                     <div class="testimonial-carousel swiper-container c0czj ctp1d cdcfy">
                                         <div class="swiper-wrapper">
@@ -467,19 +465,6 @@ export default () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="swiper-slide cbjbi cjmb3 cklpe c2kmw c29n1">
-                                                <div class="c7lpr cx7ae cbt0x cvr1a cyhno">
-                                                    <img src="/img/testimonial-02.jpg" class="cwihz" width="384" height="180" alt="Testiomonial 02"/>
-                                                </div>
-                                                <div class="cbn5t ch6lg cv6xk cyhno cklpe ce3ga c29n1 c7e8i c5att">
-                                                    <img class="cmrv0 c9xt3 cx5bd" src="/img/testimonial-sign-02.svg" width="105" height="46" alt="Testiomonial sign 02"/>
-                                                    <p class="cr1bb cj88f cet3m c7e8i">“ This card allows us to achieve compliance with minimal effort, spend practically no time on payments-related customer support, and keep the user experience on our platform. “</p>
-                                                    <div class="c3z20 cj88f c62tk">
-                                                        <span class="cr1bb">Maria Gress</span> - <span class="cwiv0">CEO &amp; Co-Founder</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
                                     <div class="c9168">

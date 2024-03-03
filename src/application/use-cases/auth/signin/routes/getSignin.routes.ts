@@ -1,5 +1,5 @@
 import { IRouter, Router } from 'express'
-import { GetSigninController } from '../controllers/get-signin.controller'
+import { GetSigninController } from '../controllers/getSignin.controller'
 
 class GetSigninRouter {
   run: IRouter
