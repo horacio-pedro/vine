@@ -1,5 +1,5 @@
 import { IRouter, Router } from 'express'
-import { landingPageRouter } from '@app/use-cases/landingpage'
+import { getStartedRouter, landingPageRouter } from '@app/use-cases/landingpage'
 import { getSigninRouter } from '@app/use-cases/auth/signin'
 import { dashboardRouter } from '@app/use-cases/dashboard'
 
@@ -14,6 +14,7 @@ class EndPoints {
   private endpoints(): void {
     this.router.use('/',
       landingPageRouter,
+      getStartedRouter,
     )
 
     this.router.use('/#app',
