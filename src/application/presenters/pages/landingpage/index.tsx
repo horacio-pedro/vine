@@ -26,8 +26,8 @@ export default () => {
                           <p class="cxobv c6xyh ceonn" data-aos="fade-up" data-aos-delay="200">Our landing page template works on all devices, so you only<br class="hidden cgj3a"/> have to set it up once, and get beautiful results forever.</p>
                           <div class="c21hj ckig3 c0czj c896x cgkx4 cf5tr cw6hw c5mm2 c5llv cdcfy c8glp" data-aos="fade-up" data-aos-delay="300">
                               <div>
-                                <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 cjkjb ck31x" href="apply.html">
-                                  Get your card
+                                <a class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 cjkjb ck31x" href="/get-started">
+                                  Get Started
                                   {/* <i class="fa fa-arrow-right"></i> */}
                                 </a>
                               </div>
