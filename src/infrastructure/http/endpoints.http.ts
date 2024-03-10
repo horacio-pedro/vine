@@ -17,11 +17,11 @@ class EndPoints {
       getStartedRouter,
     )
 
-    this.router.use('/#app',
+    this.router.use('/app',
       dashboardRouter,
     )
 
-    this.router.use('/#app/auth',
+    this.router.use('/app/auth',
       getSigninRouter,
     )
   }

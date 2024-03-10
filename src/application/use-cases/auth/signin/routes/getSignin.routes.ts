@@ -1,5 +1,6 @@
 import { IRouter, Router } from 'express'
-import { GetSigninController } from '../controllers/getSignin.controller'
+import { GetEmployerSigninController } from '../controllers/getEmployerSignin.controller'
+import { GetDeveloperSigninController } from '../controllers/getDevelopererSignin.controller copy'
 
 class GetSigninRouter {
   run: IRouter
@@ -11,9 +12,14 @@ class GetSigninRouter {
 
   router() {
     this.run.get(
-      '/signin',
-      GetSigninController.get,
+      '/signin/employer',
+      GetEmployerSigninController.get,
     )
+    this.run.get(
+      '/signin/developer',
+      GetDeveloperSigninController.get,
+    )
+    
   }
 }
 

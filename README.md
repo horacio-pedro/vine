@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Be a vine in the perfect terrain to germinate, become professional and obtain the best opportunities in the job market.
+Be a vine in the perfect ground to germinate, become professional and obtain the best opportunities in the job market.
 
 ## MVP | Minimum Viable Product
 
