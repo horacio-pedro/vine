@@ -10,11 +10,7 @@ class DashboardRouter {
   }
 
   private router(): void {
-    this.run.get(
-      '/#app',
-      (req, res) => res.redirect(Route.SIGNIN),
-    )
-
+    this.run.get('/', (req, res) => res.redirect(Route.GETSTARTED))
   }
 }
 

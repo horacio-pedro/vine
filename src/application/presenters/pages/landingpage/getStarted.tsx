@@ -10,7 +10,7 @@ export default () => {
               <div class="cpmys ce0su">
                 <a class="c4ozt" href="/">
                   <img
-                    src="/img/vine-high-resolution-logo-white-transparent.svg"
+                    src="/img/vine-high-resolution-logo-black-transparent.svg"
                     alt="vine app"
                     style="width: 175px"
                   />
