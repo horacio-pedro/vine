@@ -1,5 +1,5 @@
 class Route {
-  SIGNIN = '/auth/signin'
+  GETSTARTED = '/get-started'
 }
 
 export default new Route()

@@ -1,6 +1,6 @@
 class Page {
   LANDINGPAGE = 'landingpage'
-  GETSTART = 'landingpage/getStart'
+  GETSTARTED = 'landingpage/getStarted'
 }
 
 export default new Page()

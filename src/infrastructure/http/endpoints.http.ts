@@ -1,4 +1,5 @@
 import { IRouter, Router } from 'express'
+import { e404 } from '@app/middlewares/errors'
 import { getStartedRouter, landingPageRouter } from '@app/use-cases/landingpage'
 import { getSigninRouter } from '@app/use-cases/auth/signin'
 import { dashboardRouter } from '@app/use-cases/dashboard'
@@ -24,6 +25,7 @@ class EndPoints {
     this.router.use('/app/auth',
       getSigninRouter,
     )
+    this.router.use(e404)
   }
 }
 
