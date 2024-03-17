@@ -1,8 +1,8 @@
 import { LandingPage } from '@app/presenters'
 
-export default () => {
+export default (props: { title: string }) => {
   return (
-    <LandingPage>
+    <LandingPage  title={props.title}>
       <div class="c29n1 cfi8v cklpe co3fs">
         <header class="cx5bd csam5 cjkjb">
           <div class="cdcfy cl9ye chlof cc8xx">
@@ -25,7 +25,7 @@ export default () => {
               <div class="cmprh czcbq c823v c6lgd">
                 <div class="cu831 cf4lx ca0tr">
                   <div class="ch97d c7e8i clpz0 cwe4v cfe0z c226t">
-                    <h1 class="caveb ceonn">Build flexible cards for your business</h1>
+                    <h1 class="caveb ceonn">Comece em poucos passos</h1>
                     <div class="c8glp">
                       <ul class="c98p9 cklpe czlr6 c3z20">
                         <li class="c29n1 c38qt cjmb3">
@@ -35,7 +35,7 @@ export default () => {
                           >
                             &check;
                           </span>
-                          <span>Create cards that work exactly as you configured them</span>
+                          <span>Crie uma conta</span>
                         </li>
                         <li class="c29n1 c38qt cjmb3">
                           <span
@@ -44,7 +44,7 @@ export default () => {
                           >
                             &check;
                           </span>
-                          <span>Focus critical resources on your core business</span>
+                          <span>Pesquise por vagas / candidatos</span>
                         </li>
                         <li class="c29n1 c38qt cjmb3">
                           <span
@@ -53,13 +53,13 @@ export default () => {
                           >
                             &check;
                           </span>
-                          <span>Make real-time decisions on charges and spendings.</span>
+                          <span>Candidata-se / Contacta o candidato</span>
                         </li>
                       </ul>
                     </div>
                     <div class="cjkjb">
                       <div class="c755p clpz0 cwyp8 cnxvz cff69 c6nbq cwiv0 c226t">
-                        Trusted bt the best
+                        Confiado pelos melhores
                       </div>
                       <div class="cc2i9 c29n1 c3d4t c38qt cxwmo c919v cf5hq c0b1p">
                         <div class="cbihh cu4gs clzlu">
@@ -108,120 +108,25 @@ export default () => {
                     ></div>
                     <img
                       class="cistn cx5bd c08f2 cfhlr cakxp cr579 czw6c cs15f cleik c89jy cb6o0"
-                      src="./images/hero-illustration.svg"
+                      src="/img/hero-illustration.svg"
                       width="960"
                       height="960"
                       aria-hidden="true"
                     />
-                    <div class="c29n1 c4i6y c2xto c9ob8 cdc85">
-                      <div class="cdcfy cjkjb cbo7w c36be c5att cbjbi cqqyw cy215 c7e3v c84ry">
+                    <div class="c29n1 c4i6y c2xto c9ob8 cdc85" style='margin-top: 110px'>
+                      <div class="cdcfy cjkjb cbo7w c36be c5att cbjbi cqqyw cy215 c7e3v c84ry" style='height: 200px'>
                         <form>
                           <div class="cf5tr">
                             <div class="cdjl1 crjhh c5mm2 c896x">
-                              <label
-                                class="cc9lh cw7u7 c4ozt cjmb3 c62tk c50dd cq72s c65xn cusnp"
-                                for="first-name"
-                              >
-                                First name
-                              </label>
-                              <div class="ce0su c1dbb cvs2y">
-                                <input
-                                  id="first-name"
-                                  class="cfjie cjkjb cmxc3 c62tk"
-                                  type="text"
-                                  placeholder="Patrick"
-                                  required
-                                />
-                              </div>
+                              <button type='button' onclick="location.href='/app/auth/signin/developer'" class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x" style='width: 100%'>
+                                Criar conta de programador
+                              </button>
                             </div>
                             <div class="cdjl1 crjhh c5mm2 c896x">
-                              <label
-                                class="cc9lh cw7u7 c4ozt cjmb3 c62tk c50dd cq72s c65xn cusnp"
-                                for="last-name"
-                              >
-                                Last name
-                              </label>
-                              <div class="ce0su c1dbb cvs2y">
-                                <input
-                                  id="last-name"
-                                  class="cfjie cjkjb cmxc3 c62tk"
-                                  type="text"
-                                  placeholder="Mills"
-                                  required
-                                />
-                              </div>
+                              <button type='button' onclick="location.href='/app/auth/signup/employer'" class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x" style='width: 100%; margin-top: 80px'>
+                                Criar conta de empregador
+                              </button>
                             </div>
-                            <div class="cdjl1 crjhh c5mm2 c896x">
-                              <label
-                                class="cc9lh cw7u7 c4ozt cjmb3 c62tk c50dd cq72s c65xn cusnp"
-                                for="email"
-                              >
-                                Work email
-                              </label>
-                              <div class="ce0su c1dbb cvs2y">
-                                <input
-                                  id="email"
-                                  class="cfjie cjkjb cmxc3 c62tk"
-                                  type="email"
-                                  placeholder="patrick@example.com"
-                                  required
-                                />
-                              </div>
-                            </div>
-                            <div class="cdjl1 crjhh c5mm2 c896x">
-                              <label
-                                class="cc9lh cw7u7 c4ozt cjmb3 c62tk c50dd cq72s c65xn cusnp"
-                                for="website"
-                              >
-                                Website
-                              </label>
-                              <div class="ce0su c1dbb cvs2y">
-                                <input
-                                  id="website"
-                                  class="cfjie cjkjb cmxc3 c62tk"
-                                  type="text"
-                                  placeholder="example.com"
-                                  required
-                                />
-                              </div>
-                            </div>
-                            <div class="cdjl1 crjhh c5mm2 c896x">
-                              <label
-                                class="cc9lh cw7u7 c4ozt cjmb3 c62tk c50dd cq72s c65xn cusnp"
-                                for="company-size"
-                              >
-                                Company size
-                              </label>
-                              <div class="ce0su c1dbb cvs2y">
-                                <select id="company-size" class="ch4gi cjkjb cmxc3 c62tk" required>
-                                  <option>Less than 10</option>
-                                  <option>More than 10</option>
-                                  <option>More than 20</option>
-                                  <option>More than 50</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="cdjl1 crjhh c5mm2 c896x">
-                              <label
-                                class="cc9lh cw7u7 c4ozt cjmb3 c62tk c50dd cq72s c65xn cusnp"
-                                for="country"
-                              >
-                                Country
-                              </label>
-                              <div class="ce0su c1dbb cvs2y">
-                                <select id="country" class="ch4gi cjkjb cmxc3 c62tk" required>
-                                  <option>United States</option>
-                                  <option>United Kingdom</option>
-                                  <option>Germany</option>
-                                  <option>Italy</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="c6n45 cf1hj">
-                            <button class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x">
-                              Submit the form
-                            </button>
                           </div>
                         </form>
                       </div>

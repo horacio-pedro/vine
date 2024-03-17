@@ -1,4 +1,4 @@
-export const App = (props: JSXTE.ElementProps) => {
+export const Exception = (props: JSXTE.ElementProps) => {
   return (
     <html>
       <head>
@@ -13,10 +13,8 @@ export const App = (props: JSXTE.ElementProps) => {
         <script src="/libs/websocket/socket.io.min.js"></script>
         <script src="/js/app/websocket.js"></script>
       </head>
-      <body class="application application-offset">
-        <div class="container-fluid container-application">
-          {props.children}
-        </div>
+      <body class="sidenav-pinned ready">
+        {props.children}
       </body>
     </html>
   )
