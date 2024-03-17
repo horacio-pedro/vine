@@ -2,9 +2,9 @@
 import { LandingPage } from '@app/presenters'
 import { Header } from '@app/presenters/components/header'
 
-export default () => {
+export default (props: { title: string }) => {
   return (
-    <LandingPage>
+    <LandingPage title={props.title}>
       <Header />
       <main class="c7e8i">
         <section class="cyhno">
@@ -34,14 +34,11 @@ export default () => {
                     <br class="hidden cgj3a" /> oportunidades nas empresas mais top do mercado.
                   </p>
                   <div
-                    class="c21hj ckig3 c0czj c896x cgkx4 cf5tr cw6hw c5mm2 c5llv cdcfy c8glp"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                  >
+                    class="c21hj ckig3 c0czj c896x cgkx4 cf5tr cw6hw c5mm2 c5llv cdcfy c8glp">
                     <div>
                       <a
                         class="cv4t9 c9gu4 c38qt cbnx3 c98p9 co504 cn4p0 cjkjb ck31x"
-                        href="/get-started"
+                        href="/app/auth/signin/developer"
                       >
                         Entrar com programador
                         <span class="cddud cq3sh c514c ccbbk cgdcn cw78b ckf0b">&#10140;</span>
@@ -50,7 +47,7 @@ export default () => {
                     <div>
                       <a
                         class="ctsgt ctopb c2c8i cwa1c ch1vk c4sti cpi22 cogk8 cmjy8 c38qt c98p9 c4nhw co504 cyhno cn4p0 cjkjb"
-                        href="support.html"
+                        href="/app/auth/signin/employer"
                       >
                         Entrar como empregador
                       </a>
@@ -112,10 +109,7 @@ export default () => {
                   </p>
                 </div>
                 <div
-                  class="cx9ia cxcsr c3f4j ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
+                  class="cx9ia cxcsr c3f4j ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc">
                   <div class="czmmv">
                     <img src="/img/finddeveloper.png" alt="vine app" width="56" height="56" />
                   </div>
@@ -162,7 +156,7 @@ export default () => {
                       <div>
                         <a
                           class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x"
-                          href="apply.html"
+                          href="/app/auth/signin/developer"
                         >
                           Encontre oportunidades
                           <span class="cddud cq3sh c514c cwkqb cgdcn cw78b ckf0b">&#10140;</span>
@@ -243,7 +237,7 @@ export default () => {
                     >
                       É assim que a inovação funciona agora. *Aceda a talentos especializados para
                       preencher as suas lacunas de competências *Controle o seu fluxo de trabalho:
-                      contrate, classifique e pague o seu talento *Faça parceria com a Vine para
+                      contrate, classifique e pague o seu talento *Faça parceria com o Vine para
                       suporte de ponta a ponta.
                     </p>
                     <div
@@ -255,7 +249,7 @@ export default () => {
                       <div>
                         <a
                           class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x"
-                          href="apply.html"
+                          href="/app/auth/signin/employer"
                         >
                           Encontre o seu candidato
                           <span class="cddud cq3sh c514c cwkqb cgdcn cw78b ckf0b">&#10140;</span>
@@ -322,7 +316,7 @@ export default () => {
                       data-aos-anchor="[data-aos-id-4]"
                       data-aos-delay="100"
                     >
-                      Porqê a sua empresa deve focar-se na Vine
+                      Porqê a sua empresa deve focar-se no Vine
                     </h2>
                     <p
                       class="c3z20 c6xyh c1ig3"
@@ -339,7 +333,7 @@ export default () => {
                       data-aos-delay="300"
                     >
                       <div>
-                        <h5 class="cdxpy c755p">Physical Stores</h5>
+                        <h5 class="cdxpy c755p">Desenvolvedores</h5>
                         <ul class="c3z20 czlr6 c98p9 cklpe">
                           <li class="c38qt c29n1">
                             <span
@@ -357,7 +351,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Programador Web</span>
+                            <span>IoT</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -366,7 +360,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Cientista da Computação</span>
+                            <span>UI/UX Developer</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -375,7 +369,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Bershka</span>
+                            <span>Backend e Frontend</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -384,7 +378,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Sainsbury's</span>
+                            <span>Web Designer</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -393,7 +387,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Marks &amp; Spencer</span>
+                            <span>Programador Fullstack</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -402,7 +396,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Primark</span>
+                            <span>Cientista de Dados</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -411,12 +405,12 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>SportsDirect</span>
+                            <span>Inteligência Artificial</span>
                           </li>
                         </ul>
                       </div>
                       <div>
-                        <h5 class="cdxpy c755p">Online Stores</h5>
+                        <h5 class="cdxpy c755p">DevOps / SRE</h5>
                         <ul class="c3z20 czlr6 c98p9 cklpe">
                           <li class="c38qt c29n1">
                             <span
@@ -425,7 +419,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Amazon Prime</span>
+                            <span>Amazon Web Service</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -434,7 +428,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Universal Store</span>
+                            <span>Docker</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -443,7 +437,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Apple One</span>
+                            <span>Kubernetes</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -452,7 +446,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Booking.com</span>
+                            <span>Google Cloud Plataform</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -461,7 +455,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Netflix</span>
+                            <span>Microsoft Azure</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -470,7 +464,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Deliveroo</span>
+                            <span>Git CI/CD</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -479,7 +473,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Spotify</span>
+                            <span>Prometheus</span>
                           </li>
                           <li class="c38qt c29n1">
                             <span
@@ -488,7 +482,7 @@ export default () => {
                             >
                               &check;
                             </span>
-                            <span>Well Made Clothes</span>
+                            <span>Jenkins</span>
                           </li>
                         </ul>
                       </div>
@@ -502,9 +496,9 @@ export default () => {
                       <div>
                         <a
                           class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 ck31x"
-                          href="apply.html"
+                          href="/get-started"
                         >
-                          Get your card
+                          Começar agora
                           <span class="cddud cq3sh c514c cwkqb cgdcn cw78b ckf0b">&#10140;</span>
                         </a>
                       </div>
@@ -536,11 +530,10 @@ export default () => {
                 <div class="cwihz cqmiq clpz0 cyhno c4pup cdcfy">
                   <div class="cyy6b c7ior c8glp" data-aos="fade-up">
                     <h2 class="c4nhw cet3m caveb">
-                      Get started in minutes and connect all your accounts in one place
+                      Comece em poucos minutos e conecte-se a empresa que desejar
                     </h2>
                     <p class="cxobv c6xyh ceonn">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua.
+                      Navegue pelas vagas publicadas no Vine ou crie um perfil gratuito para encontrar o trabalho que você gosta de fazer.
                     </p>
                   </div>
                   <div class="cxwmo c1ig3 c29n1" data-aos="fade-up" data-aos-delay="100">
@@ -564,30 +557,27 @@ export default () => {
                       <div class="czmmv">
                         <div class="cxwmo ca4kr c38qt c58pn cz523 cdxpy c29n1 cj1fh ch7hw">1</div>
                       </div>
-                      <h4 class="c4nhw cdxpy c1dgw czli9">Download the app</h4>
+                      <h4 class="c4nhw cdxpy c1dgw czli9">Crie uma conta</h4>
                       <p class="cxobv">
-                        Create cards that work exactly as you configured them. Make real-time
-                        decisions on charges and spendings.
+                        Crie a sua conta Vine conectando-a ao seu perfil GitHub em dois cliques, a seguir comce aexplorar as oportunidades.
                       </p>
                     </div>
                     <div class="cx9ia c3f4j c6gay ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc">
                       <div class="czmmv">
                         <div class="cxwmo ca4kr c38qt c58pn cz523 cdxpy c29n1 cj1fh ch7hw">2</div>
                       </div>
-                      <h4 class="c4nhw cdxpy c1dgw czli9">Request your card</h4>
+                      <h4 class="c4nhw cdxpy c1dgw czli9">Pesquise por vagas</h4>
                       <p class="cxobv">
-                        Create cards that work exactly as you configured them. Make real-time
-                        decisions on charges and spendings.
+                        Pesquique pelas vagas disponíveis e escolha aquelas que adequam-se  mais aos seus objetivos.
                       </p>
                     </div>
                     <div class="cx9ia c3f4j c6gay ci2ql cbt0x cybhr c233e c00pl ckl5k cyg2f cyhno cn4rc">
                       <div class="czmmv">
                         <div class="cxwmo ca4kr c38qt c58pn cz523 cdxpy c29n1 cj1fh ch7hw">3</div>
                       </div>
-                      <h4 class="c4nhw cdxpy c1dgw czli9">Connect all your account</h4>
+                      <h4 class="c4nhw cdxpy c1dgw czli9">Candidata-se</h4>
                       <p class="cxobv">
-                        Create cards that work exactly as you configured them. Make real-time
-                        decisions on charges and spendings.
+                        Depois de escolher as oportunidades que mais lhe interessaram, candidata-se e eaguarde pela notificação da empreas.
                       </p>
                     </div>
                   </div>
@@ -612,7 +602,7 @@ export default () => {
                       data-aos-anchor="[data-aos-id-6]"
                       data-aos-delay="100"
                     >
-                      Compliance built card for businesses and professionals
+                      Porquê as empresas escolhem o Vine
                     </h2>
                     <p
                       class="c3z20 c6xyh c1ig3"
@@ -620,9 +610,7 @@ export default () => {
                       data-aos-anchor="[data-aos-id-6]"
                       data-aos-delay="200"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua minim veniam, quis nostrud
-                      exercitation.
+                      Não somo apenas uma plataforma, nos disponibilizamos a ser a ponte entre a empresa e o Profissional.
                     </p>
                     <ul
                       class="c3z20 czlr6 c98p9 cklpe"
@@ -637,7 +625,7 @@ export default () => {
                         >
                           &check;
                         </span>
-                        <span>Identity verifications</span>
+                        <span>Prova de qualidade</span>
                       </li>
                       <li class="c38qt c29n1">
                         <span
@@ -646,7 +634,7 @@ export default () => {
                         >
                           &check;
                         </span>
-                        <span>Secure credit card data tokenization</span>
+                        <span>Segurança dos dados</span>
                       </li>
                       <li class="c38qt c29n1">
                         <span
@@ -655,7 +643,7 @@ export default () => {
                         >
                           &check;
                         </span>
-                        <span>Online and mobile payments</span>
+                        <span>Simple e automatizado</span>
                       </li>
                       <li class="c38qt c29n1">
                         <span
@@ -664,7 +652,7 @@ export default () => {
                         >
                           &check;
                         </span>
-                        <span>IGlobal regulations and compliance</span>
+                        <span>Sem custos para se integrar</span>
                       </li>
                     </ul>
                   </div>
@@ -699,15 +687,8 @@ export default () => {
                                 alt="Testiomonial sign 01"
                               />
                               <p class="cr1bb cj88f cet3m c7e8i">
-                                “ This card is awesome. The app lets me link foreign cards with a
-                                new one which makes everything 100 times easier. Like Apple Pay,
-                                online shopping without useless phone confirmation. I wish I knew
-                                this earlier. ”
+                                “ Verifique as amostras de trabalho de qualquer profissional, avaliações de clientes e verificação de identidade. ”
                               </p>
-                              <div class="c3z20 cj88f c62tk">
-                                <span class="cr1bb">Elisa Koeppel</span> -{' '}
-                                <span class="cwiv0">CEO &amp; Co-Founder</span>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -787,26 +768,26 @@ export default () => {
             <div class="c55v2 cdioo">
               <div class="crjhh c38qt c3jio cxwkc c5mm2">
                 <div class="c226t clpz0 cpct6 cfe0z c1ig3">
-                  <p class="c29au c50dd c1dgw czmmv">What are you waiting for?</p>
-                  <h2 class="c9gu4 caveb">Get the only custom super card</h2>
+                  <p class="c29au c50dd c1dgw czmmv">Gostaria de começar?</p>
+                  <h2 class="c9gu4 caveb">Comece em dois passos</h2>
                 </div>
                 <div class="ce0su">
                   <div class="c21hj ckig3 c0czj c896x cgkx4 cf5tr cw6hw c5mm2 c5llv cdcfy c8glp">
                     <div>
                       <a
                         class="cv52j c38qt cyuce c98p9 ckk70 co504 cn4p0 cjkjb ck31x"
-                        href="apply.html"
+                        href="/app/auth/signin/developer"
                       >
-                        Get your card
+                        Entrar como programador
                         <span class="cddud cq3sh c514c ccbbk cgdcn cw78b ckf0b">&#10140;</span>
                       </a>
                     </div>
                     <div>
                       <a
                         class="ctsgt ctopb c2c8i cdqaz c4sti cpi22 cmjy8 c38qt cg0z9 c98p9 c4nhw co504 cyhno cn4p0 cjkjb"
-                        href="#0"
+                        href="/app/auth/signin/employer"
                       >
-                        Get in touch
+                        Entrar como empregador
                       </a>
                     </div>
                   </div>

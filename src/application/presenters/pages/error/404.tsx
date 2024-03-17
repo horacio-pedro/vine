@@ -1,4 +1,5 @@
-import { App } from '@app/presenters/App'
+import { Exception } from './index'
+
 
 /* eslint-disable max-len */
 const background = `
@@ -18,7 +19,7 @@ const image404 = '<svg class="injected-svg svg-inject opacity-8 img-fluid" id="e
 
 export default () => {
   return (
-    <App>
+    <Exception>
       <div class="min-vh-100 h-100vh py-5 d-flex align-items-center bg-gradient-primary">
         <div class="bg-absolute-cover vh-100 overflow-hidden d-none d-md-block">
           <figure class="w-100">
@@ -30,9 +31,9 @@ export default () => {
             <div class="col-lg-6">
               <h6 class="display-1 mb-3 font-weight-600 text-white">404</h6>
               <p class="lead text-lg text-white mb-5">Sorry, the page you are looking for could not be found.</p>
-              <a class="btn btn-white btn-icon rounded-pill hover-translate-y-n3" href="/">
+              <a class="btn btn-white btn-icon rounded-pill hover-translate-y-n3" href="/" onclick='history.go(-1)'>
                 <span class="btn-inner--icon"><i class="fa fa-home"></i></span>
-                <span class="btn-inner--text">Return home</span>
+                <span class="btn-inner--text">Back to previous page</span>
               </a>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
@@ -41,6 +42,6 @@ export default () => {
           </div>
         </div>
       </div>
-    </App>
+    </Exception>
   )
 }

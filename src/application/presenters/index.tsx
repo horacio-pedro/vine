@@ -4,7 +4,7 @@ export const LandingPage = (props: JSXTE.ElementProps) => {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Vine | De programadores para empresas</title>
+        <title>Vine | {props.title}</title>
         <link href="/css/style.css" rel="stylesheet"></link>
       </head>
       <body class="c65xn csyyo cnxvz c72sf c36be">
