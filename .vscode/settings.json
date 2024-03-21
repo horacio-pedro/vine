@@ -11,7 +11,8 @@
     "dao": "json",
     "http": "contract",
     "presenters": "global",
-    "seeds": "include"
+    "seeds": "include",
+    "schemas": "Database",
   },
   "editor.colorDecorators": true,
   "eslint.run": "onType",
