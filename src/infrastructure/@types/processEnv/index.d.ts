@@ -29,6 +29,7 @@ declare global {
       SECRET_SESSION: string
       DB_CLOUD: boolean
       SESSION_EXPIRE: number
+      GITHUB_API_URL: string
     }
   }
 }
