@@ -30,6 +30,9 @@ declare global {
       DB_CLOUD: boolean
       SESSION_EXPIRE: number
       GITHUB_API_URL: string
+      GITHUB_CLIENT_ID: string
+      GITHUB_CLIENT_SECRET: string
+      GITHUB_URL_CALLBACK: string
     }
   }
 }

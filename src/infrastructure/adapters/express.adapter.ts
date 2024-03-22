@@ -6,6 +6,7 @@ import passport from 'passport'
 import session from 'express-session'
 import fileUpload from 'express-fileupload'
 import { expressExtend } from 'jsxte'
+import { localStrategy } from '@app/use-cases/auth/strategy'
 import { endpoints } from '@infra/http/endpoints.http'
 import { connectMongo, cookieConfiguration, directive, directoryOfPages, localStorage, staticFiles, temporaryStaticFiles } from './utils'
 
@@ -20,13 +21,14 @@ class App {
   }
 
   private templateEngine(): void {
-		expressExtend(this.app)
+    expressExtend(this.app)
     this.app.set('views', directoryOfPages)
     this.app.use(express.json())
   }
 
   private securityHeaders(): void {
     this.app.set('trust proxy', ['loopback', 'linklocal', 'uniquelocal'])
+    localStrategy(passport)
     this.app.use(
       session({
         cookie: cookieConfiguration,

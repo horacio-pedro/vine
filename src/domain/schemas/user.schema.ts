@@ -1,13 +1,16 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
 import { randomUUID } from 'crypto'
-import { Passthrough, Ref, prop } from '@typegoose/typegoose'
+import { Passthrough, Ref, plugin, prop } from '@typegoose/typegoose'
 import { CompanySchema } from './company.schema'
+import * as findOrCreate from 'mongoose-findorcreate'
 
 enum UserEnum {
   DEV = 'Developer',
   EMP = 'Employer'
 }
+
+@plugin(findOrCreate)
 
 export class UserSchema {
   @prop({ default: () => randomUUID() })
@@ -36,6 +39,12 @@ export class UserSchema {
 
   @prop({ type: () => new Passthrough({ bio: String, publicRepos: String, followers: Number, following: Number, resposUrl: String }, true) })
   public dev?: { bio: string, publicRepos: string, followers: number, following: number, resposUrl: string }
+
+  @prop()
+  public location?: string
+  
+  @prop()
+  public githubId?: string
   
   @prop({ timestamps: true })
   createdAt!: Date

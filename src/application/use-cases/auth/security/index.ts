@@ -1,0 +1,6 @@
+export * from './routes/confirmTheEmail.routes'
+export * from './routes/getEmailConfirmation.routes'
+export * from './routes/getRecoverPassword.routes'
+export * from './routes/getSetNewPassword.routes'
+export * from './routes/recoverPassword.routes'
+export * from './routes/setNewPassword.routes'
