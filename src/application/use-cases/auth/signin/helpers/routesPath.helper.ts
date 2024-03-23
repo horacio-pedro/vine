@@ -1,6 +1,7 @@
 class Route {
   GETSTARTED = '/get-started'
-  AUTH_SIGNIN = '/auth/signin'
+  EMP_AUTH_SIGNIN = '/app/auth/signin/employer'
+  DEV_AUTH_SIGNIN = '/app/auth/signin/developer'
   DASHBOARD = '/app/dashboard'
 }
 

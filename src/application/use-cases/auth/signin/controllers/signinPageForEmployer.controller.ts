@@ -3,7 +3,7 @@ import { Route } from '@app/use-cases/dashboard/helpers'
 import { Exception } from '@app/helpers'
 import { Page } from '../helpers'
 
-export class DeveloperSigninPageController {
+export class SigninPageForEmployerController {
   static get(request: Request, response: Response): void {
     try {
       const title = 'Entrar'
@@ -15,9 +15,9 @@ export class DeveloperSigninPageController {
         }
       }
 
-      return response.render(Page.DEVELOPER_SIGNIN, { title })
+      return response.render(Page.SIGNIN_FOR_EMPLOYER, { title })
     } catch (err: unknown) {
-      response.status(401).render(Exception.E401, { title: 'Erro 401' })
+      response.status(500).render(Exception.E500, { title: 'Erro 500' })
     }
   }
 }

@@ -1,5 +1,5 @@
 class Page {
-  LANDINGPAGE = 'landingpage'
+  HOMEPAGE = 'landingpage/home'
   GETSTARTED = 'landingpage/getStarted'
 }
 

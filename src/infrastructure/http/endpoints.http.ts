@@ -1,8 +1,9 @@
 import { IRouter, Router } from 'express'
-import { e404 } from '@app/middlewares/errors'
+import { e404, e500 } from '@app/middlewares/errors'
 import { getStartedRouter, landingPageRouter } from '@app/use-cases/landingpage'
-import { getSigninRouter } from '@app/use-cases/auth/signin'
+import { signinRouter } from '@app/use-cases/auth/signin'
 import { dashboardRouter } from '@app/use-cases/dashboard'
+import { signupRouter } from '@app/use-cases/auth/signup'
 
 class EndPoints {
   public readonly router: IRouter
@@ -23,9 +24,12 @@ class EndPoints {
     )
 
     this.router.use('/app/auth',
-      getSigninRouter,
+      signinRouter,
+      signupRouter,
     )
+
     this.router.use(e404)
+    this.router.use(e500)
   }
 }
 

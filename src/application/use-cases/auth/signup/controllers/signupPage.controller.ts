@@ -17,7 +17,7 @@ export class SignupPageController {
 
       return response.render(Page.AUTH_SIGNUP, { pageTitle })
     } catch (err: unknown) {
-      response.status(401).render(Exception.E401, { pageTitle: 'Erro 401' })
+      response.status(500).render(Exception.E500, { pageTitle: 'Erro 500' })
     }
   }
 }

@@ -1,18 +1,14 @@
+import { PassportStatic } from 'passport'
 import { Strategy } from 'passport-local'
 import { compare } from 'bcrypt'
 import { Request } from 'express'
-import { userDAO } from '@domain/dao/user.dao'
-import { IUser } from '@domain/interfaces/user.interface'
-import { Notification } from '@application/use-cases/auth/signin/helpers'
+import { UserDAO } from '@domain/dao/user.dao'
+import { Notification } from '@app/use-cases/auth/signin/helpers'
 
-export const localStrategy = (passport: {
-  use: (fn: Strategy) => void;
-  serializeUser: (fn: (request: any, user: any, done: any) => void) => void;
-  deserializeUser: (fn: (id: any, done: any) => void) => void;
-}) => {
+export const localStrategy = (passport: PassportStatic) => {
   passport.use(
     new Strategy({ usernameField: 'email' }, (email, password, done) => {
-      userDAO.findByEmail(email)
+      UserDAO.findOneByEmail(email)
         .select('email password')
         .then((user) => {
           if (!user) {
@@ -21,7 +17,7 @@ export const localStrategy = (passport: {
             })
           }
           if (user) {
-            compare(password, user!.password, (err, match: boolean) => {
+            compare(password, user.password, (err, match: boolean) => {
               if (err) {
                 return done(err)
               }
@@ -43,13 +39,13 @@ export const localStrategy = (passport: {
   )
 
   passport.serializeUser(
-    (_request: Request, user: IUser, done) => {
+    (_request: Request, user: any, done: any) => {
       done(null, user)
     },
   )
 
   passport.deserializeUser(async (id: string, done) => {
-    const user = await userDAO.findOneById(id)
+    const user = await UserDAO.findOneById(id)
     if (user) {
       done(null, user)
     }

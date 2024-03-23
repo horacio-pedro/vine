@@ -1,2 +1,2 @@
-export * from './routes/landingpage.routes'
-export * from './routes/getStarted.routes'
+export * from './routes/homPage.routes'
+export * from './routes/getStartedPage.routes'

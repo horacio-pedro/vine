@@ -1,5 +1,4 @@
 import { IRouter, Router } from 'express'
-import { authorization } from '@application/middlewares/access-security-policy'
 import { SignoutController } from '../controllers/signout.controller'
 
 class SignoutRouter {
@@ -13,7 +12,6 @@ class SignoutRouter {
   controller() {
     this.run.get(
       '/signout',
-      authorization,
       SignoutController.kill,
     )
   }
