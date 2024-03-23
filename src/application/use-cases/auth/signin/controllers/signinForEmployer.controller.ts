@@ -1,10 +1,11 @@
 import passport from 'passport'
 import { NextFunction, Request, Response } from 'express'
 import { z } from 'zod'
+import { IUser, Notify } from '@app/helpers'
+import { Notification, Page, Route } from '../helpers'
 import { limiterConsecutiveFailsByEmailAndIP, limiterSlowBruteByIP } from '../middlewares'
-import { Notification, Route } from '../helpers'
 
-export class EmployerSigninController {
+export class SigninForEmployerController {
   static async auth(request: Request, response: Response, next: NextFunction): Promise<Response | any> {
     const maxWrongAttemptsByIPperDay = 10
     const maxConsecutiveFailsByEmailAndIP = 15
@@ -36,7 +37,7 @@ export class EmployerSigninController {
       })
 
     } else {
-      passport.authenticate('local', async function (err: Error, user: TUser, info: TInfo) {
+      passport.authenticate('local', async function (err: Error, user: IUser, info: { message: string }) {
         if (err) {
           return next(err)
         }
@@ -51,7 +52,7 @@ export class EmployerSigninController {
 
             await Promise.all(promises)
             request.flash(Notify.ERROR, Notification.SIGNIN_ERROR)
-            response.redirect(Route.AUTH_SIGNIN)
+            response.redirect(Route.EMP_AUTH_SIGNIN)
           } catch (rlRejected: any) {
             if (rlRejected instanceof Error) {
               throw rlRejected
@@ -60,9 +61,9 @@ export class EmployerSigninController {
                 Math.round(rlRejected.msBeforeNext / 1000),
               )
               response.set('Retry-After', timeOut)
-              response.status(429).render('error/429', {
+              response.status(429).render(Page.E429, {
                 timeOut,
-                pageTitle: `Acesso bloqueado por ${timeOut}`,
+                title: `Acesso bloqueado por ${timeOut}`,
               })
             }
           }

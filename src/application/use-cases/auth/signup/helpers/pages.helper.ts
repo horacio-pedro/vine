@@ -1,6 +1,5 @@
 class Page {
-  AUTH_SIGNUP = 'auth/signup'
-  AUTH_SIGNUP_SUCCESS = 'auth/signup-success'
+  AUTH_SIGNUP = 'auth/signupForEmployer'
 }
 
 export default new Page()

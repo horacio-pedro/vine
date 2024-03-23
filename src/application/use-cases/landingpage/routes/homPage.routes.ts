@@ -1,5 +1,5 @@
 import { IRouter, Router } from 'express'
-import { LandingPageController } from '../controllers/landingpage.controller'
+import { HomePageController } from '../controllers/homePage.controller'
 
 class LandingPageRouter {
   public readonly run: IRouter
@@ -12,7 +12,7 @@ class LandingPageRouter {
   private router(): void {
     this.run.get(
       '/',
-      LandingPageController.get,
+      HomePageController.get,
     )
 
   }

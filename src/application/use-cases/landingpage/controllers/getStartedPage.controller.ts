@@ -3,10 +3,10 @@ import { Route } from '@app/use-cases/dashboard/helpers'
 import { Exception } from '@app/helpers'
 import { Page } from '../helpers'
 
-export class EmployerSigninPageController {
+export class GetStartedPageController {
   static get(request: Request, response: Response): void {
     try {
-      const title = 'Entrar'
+      const title = 'Começar'
 
       if (request.isAuthenticated()) {
         const { confirmedEmail } = request.user as unknown as { confirmedEmail: boolean }
@@ -15,9 +15,9 @@ export class EmployerSigninPageController {
         }
       }
 
-      return response.render(Page.EMPLOYER_SIGNIN, { title })
+      return response.render(Page.GETSTARTED, { title })
     } catch (err: unknown) {
-      response.status(401).render(Exception.E401, { title: 'Erro 401' })
+      response.status(500).render(Exception.E500, { title: 'Erro 401' })
     }
   }
 }

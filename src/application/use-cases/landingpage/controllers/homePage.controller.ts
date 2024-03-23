@@ -2,13 +2,13 @@ import { Request, Response } from 'express'
 import { Exception } from '@app/helpers'
 import { Page } from '../helpers'
 
-export class LandingPageController {
+export class HomePageController {
   static get(request: Request, response: Response): void {
     try {
       const title = 'From programmers to businesses'
-      return response.render(Page.LANDINGPAGE, { title })
+      return response.render(Page.HOMEPAGE, { title })
     } catch (err: unknown) {
-      response.status(401).render(Exception.E401, { title: 'Erro 401' })
+      response.status(500).render(Exception.E500, { title: 'Erro 401' })
     }
   }
 }

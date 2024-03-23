@@ -1,5 +1,5 @@
 import { IRouter, Router } from 'express'
-import { GetStartedController } from '../controllers/getStarted.controller'
+import { GetStartedPageController } from '../controllers/getStartedPage.controller'
 
 class GetStartedRouter {
   public readonly run: IRouter
@@ -12,7 +12,7 @@ class GetStartedRouter {
   private router(): void {
     this.run.get(
       '/get-started',
-      GetStartedController.get,
+      GetStartedPageController.get,
     )
 
   }

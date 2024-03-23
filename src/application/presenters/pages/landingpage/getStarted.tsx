@@ -114,16 +114,16 @@ export default (props: { title: string }) => {
                       aria-hidden="true"
                     />
                     <div class="c29n1 c4i6y c2xto c9ob8 cdc85" style='margin-top: 110px'>
-                      <div class="cdcfy cjkjb cbo7w c36be c5att cbjbi cqqyw cy215 c7e3v c84ry" style='height: 200px'>
+                      <div class="cdcfy cjkjb cbo7w c36be c5att cbjbi cqqyw cy215 c7e3v c84ry" style='height: 260px'>
                         <form>
                           <div class="cf5tr">
                             <div class="cdjl1 crjhh c5mm2 c896x">
-                              <button type='button' onclick="location.href='/app/auth/signin/developer'" class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x" style='width: 100%'>
+                              <button type='button' onclick="location.href='/app/auth/signin/developer'" class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x" style='width: 100%; font-size: larger'>
                                 Criar conta de programador
                               </button>
                             </div>
                             <div class="cdjl1 crjhh c5mm2 c896x">
-                              <button type='button' onclick="location.href='/app/auth/signup/employer'" class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x" style='width: 100%; margin-top: 80px'>
+                              <button type='button' onclick="location.href='/app/auth/signup/employer'" class="cn4p0 c98p9 c38qt ckk70 cyuce co504 cv52j ck31x" style='width: 100%; margin-top: 125px; font-size: larger'>
                                 Criar conta de empregador
                               </button>
                             </div>

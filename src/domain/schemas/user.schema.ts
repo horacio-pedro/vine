@@ -1,16 +1,13 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
 import { randomUUID } from 'crypto'
-import { Passthrough, Ref, plugin, prop } from '@typegoose/typegoose'
+import { Passthrough, Ref, prop } from '@typegoose/typegoose'
 import { CompanySchema } from './company.schema'
-import * as findOrCreate from 'mongoose-findorcreate'
 
 enum UserEnum {
   DEV = 'Developer',
   EMP = 'Employer'
 }
-
-@plugin(findOrCreate)
 
 export class UserSchema {
   @prop({ default: () => randomUUID() })
@@ -34,6 +31,9 @@ export class UserSchema {
   @prop()
   public cloudinaryPublicId?: string
 
+  @prop({ default: false })
+  public confirmedEmail!: boolean
+
   @prop({ ref: () => CompanySchema })
   public company!: Ref<CompanySchema>
 
@@ -42,10 +42,10 @@ export class UserSchema {
 
   @prop()
   public location?: string
-  
+
   @prop()
   public githubId?: string
-  
+
   @prop({ timestamps: true })
   createdAt!: Date
 

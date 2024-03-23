@@ -5,9 +5,10 @@ import helmet from 'helmet'
 import passport from 'passport'
 import session from 'express-session'
 import fileUpload from 'express-fileupload'
+import flash from 'connect-flash'
 import { expressExtend } from 'jsxte'
-import { localStrategy } from '@app/use-cases/auth/strategy'
 import { endpoints } from '@infra/http/endpoints.http'
+import { localStrategy } from '@app/use-cases/auth/signin/strategy'
 import { connectMongo, cookieConfiguration, directive, directoryOfPages, localStorage, staticFiles, temporaryStaticFiles } from './utils'
 
 class App {
@@ -40,6 +41,7 @@ class App {
     )
     this.app.use(passport.initialize())
     this.app.use(passport.session())
+    this.app.use(flash())
     this.app.use(compression())
     this.app.use(helmet.contentSecurityPolicy({ directives: directive }))
     this.app.use(helmet.crossOriginEmbedderPolicy({ policy: 'credentialless' }))

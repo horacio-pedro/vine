@@ -1,20 +1,20 @@
-import { IRouter, Router } from 'express'
-import { ConfirmTheEmailController } from '../controllers/confirmTheEmail.controller'
+// import { IRouter, Router } from 'express'
+// import { ConfirmTheEmailController } from '../controllers/confirmTheEmail.controller'
 
-class ConfirmTheEmailRouter {
-  run: IRouter
+// class ConfirmTheEmailRouter {
+//   run: IRouter
 
-  constructor() {
-    this.run = Router()
-    this.router()
-  }
+//   constructor() {
+//     this.run = Router()
+//     this.router()
+//   }
 
-  router() {
-    this.run.post(
-      '/email-confirm',
-      ConfirmTheEmailController.patch,
-    )
-  }
-}
+//   router() {
+//     this.run.post(
+//       '/email-confirm',
+//       ConfirmTheEmailController.patch,
+//     )
+//   }
+// }
 
-export const confirmTheEmailRouter = new ConfirmTheEmailRouter().run
+// export const confirmTheEmailRouter = new ConfirmTheEmailRouter().run
