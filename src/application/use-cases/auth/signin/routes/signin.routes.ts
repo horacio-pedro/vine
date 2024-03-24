@@ -3,6 +3,8 @@ import { SigninForEmployerController } from '../controllers/signinForEmployer.co
 import { SigninForDeveloperController } from '../controllers/signinForDeveloper.controller'
 import { SigninPageForEmployerController } from '../controllers/signinPageForEmployer.controller'
 import { SigninPageForDeveloperController } from '../controllers/signinPageForDeveloper.controller'
+import passport from 'passport'
+import { Route } from '../helpers'
 
 class SigninRouter {
   run: IRouter
@@ -25,10 +27,15 @@ class SigninRouter {
       '/signin/employer',
       SigninForEmployerController.auth,
     )
-    this.run.post(
-      '/signin/developer',
-      SigninForDeveloperController.auth,
-    ) 
+    this.run.get(
+      '/signin/github',
+      passport.authenticate('github', { scope: [ 'user:email' ] }),
+    )
+    this.run.get(
+      '/github/callback',
+      passport.authenticate('github', { failureRedirect: Route.DEV_AUTH_SIGNIN }),
+      SigninForDeveloperController.github,
+    )
   }
 }
 

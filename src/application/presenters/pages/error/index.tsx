@@ -5,6 +5,7 @@ export const Exception = (props: JSXTE.ElementProps) => {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Vine | {props.title}</title>
+        <link rel='icon' href='/img/favicon.png' type='image/png' />
         <link rel="stylesheet" href="/libs/@fontawesome/fontawesome-pro/css/all.min.css" />
         <link rel="stylesheet" href="/css/skylab.css" />
         <script src="/js/skylab.core.js"></script>

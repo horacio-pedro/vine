@@ -5,6 +5,7 @@ export const LandingPage = (props: JSXTE.ElementProps) => {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Vine | {props.title}</title>
+        <link rel='icon' href='/img/favicon.png' type='image/png' />
         <link href="/css/style.css" rel="stylesheet"></link>
       </head>
       <body class="c65xn csyyo cnxvz c72sf c36be">
