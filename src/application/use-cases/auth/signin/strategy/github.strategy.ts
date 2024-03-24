@@ -11,7 +11,7 @@ passport.deserializeUser(function (obj: any, done) {
   done(null, obj)
 })
 
-export const gitHubStrategy = passport.use(
+passport.use(
   new Strategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
@@ -20,6 +20,7 @@ export const gitHubStrategy = passport.use(
     // eslint-disable-next-line no-unused-vars
     function (_accessToken: unknown, _refreshToken: unknown, profile: { id: string }, done: (err: unknown, user: IUser) => void) {
       UserModel.findOne({ githubId: profile.id }, function (err: unknown, user: any) {
+        console.log(profile)
         if (err) {
           return err
         }

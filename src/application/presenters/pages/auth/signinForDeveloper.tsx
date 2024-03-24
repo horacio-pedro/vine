@@ -15,7 +15,7 @@ export default (props: { title: string }) => {
                         <h6 class="h3">Entrar</h6>
                       </div>
                       <span class="clearfix"></span>
-                      <form action="/app/auth/signin/developer" method="post">
+                      <form action="/app/auth/signin/github" method="get">
                         <div class="form-group">
                           <div class="input-group input-group-merge">
                             <button class="btn btn-sm btn-primary btn-icon w-100" type="submit">
